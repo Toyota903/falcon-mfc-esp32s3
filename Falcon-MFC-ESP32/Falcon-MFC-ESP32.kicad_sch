@@ -2788,6 +2788,17 @@
 					)
 				)
 			)
+			(property "Sim.Library" ".\\"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
 			(property "ki_keywords" "RF Radio BT ESP ESP32-S3 Espressif onboard PCB antenna"
 				(at 0 0 0)
 				(show_name no)
@@ -3029,7 +3040,7 @@
 				(pin bidirectional line
 					(at 15.24 15.24 180)
 					(length 2.54)
-					(name "IO18"
+					(name "IO18(SDA)"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3047,7 +3058,7 @@
 				(pin bidirectional line
 					(at -15.24 -2.54 0)
 					(length 2.54)
-					(name "IO8(SDA)"
+					(name "IO8(SCL)"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3139,7 +3150,7 @@
 				(pin bidirectional line
 					(at -15.24 -5.08 0)
 					(length 2.54)
-					(name "IO9(SCL)"
+					(name "IO9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4511,12 +4522,6 @@
 		(uuid "421b0759-167b-4c1c-94f7-8358b59749e6")
 	)
 	(junction
-		(at 101.6 78.74)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "44149d06-0176-4820-8f22-341cfdc730f5")
-	)
-	(junction
 		(at 207.01 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4533,6 +4538,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5cc7fc7c-ffef-4906-8984-e829a889c8f3")
+	)
+	(junction
+		(at 152.4 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6bf66a68-735b-419c-96c5-9ede7e4db212")
 	)
 	(junction
 		(at 210.82 31.75)
@@ -4631,12 +4642,12 @@
 		(uuid "fdf3da73-41ab-44c2-8f72-7ecb66f854fb")
 	)
 	(no_connect
-		(at 118.11 93.98)
-		(uuid "03d430da-e542-4e46-a8a9-95bc4061d0a1")
-	)
-	(no_connect
 		(at 148.59 73.66)
 		(uuid "114f4dab-6eec-46d7-9468-ff7869844757")
+	)
+	(no_connect
+		(at 118.11 91.44)
+		(uuid "1e11a7ce-0876-465f-b81b-23537558f8a6")
 	)
 	(no_connect
 		(at 105.41 139.7)
@@ -4671,10 +4682,6 @@
 		(uuid "40672113-404e-4320-a03a-5185881e5cc5")
 	)
 	(no_connect
-		(at 148.59 88.9)
-		(uuid "428e67ac-627f-43e1-818b-449e22d4c317")
-	)
-	(no_connect
 		(at 148.59 68.58)
 		(uuid "44a4d74b-9ced-4050-b079-cfd624b9cdcd")
 	)
@@ -4695,8 +4702,8 @@
 		(uuid "874361d0-1703-48d5-a516-a3a1a665a91c")
 	)
 	(no_connect
-		(at 148.59 58.42)
-		(uuid "9713a651-8f05-497a-b0b3-cec43832ead3")
+		(at 148.59 93.98)
+		(uuid "8f9d1b9f-570c-4ef8-8d28-36ef5ad4427c")
 	)
 	(no_connect
 		(at 148.59 78.74)
@@ -4723,8 +4730,8 @@
 		(uuid "cb835886-4d31-465e-9a99-54b07b49dfb9")
 	)
 	(no_connect
-		(at 148.59 93.98)
-		(uuid "ce124eac-c472-4eb1-983b-0a94a3dd0dc2")
+		(at 118.11 78.74)
+		(uuid "d3452e38-9ef2-4ad5-8591-bdf6bb88d7d3")
 	)
 	(no_connect
 		(at 148.59 50.8)
@@ -4936,6 +4943,16 @@
 	)
 	(wire
 		(pts
+			(xy 113.03 93.98) (xy 118.11 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3101dcc3-fc8c-45c8-a364-d4b6a86b6135")
+	)
+	(wire
+		(pts
 			(xy 214.63 80.01) (xy 214.63 83.82)
 		)
 		(stroke
@@ -4953,16 +4970,6 @@
 			(type default)
 		)
 		(uuid "3948efc4-84e6-42c7-a773-81a1c08b29e6")
-	)
-	(wire
-		(pts
-			(xy 101.6 78.74) (xy 118.11 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3ab16580-0703-42c8-a514-acd42043c21a")
 	)
 	(wire
 		(pts
@@ -5166,6 +5173,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 58.42) (xy 154.94 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59e236cf-41a7-46be-9c99-effc896958df")
+	)
+	(wire
+		(pts
 			(xy 127 35.56) (xy 127 36.83)
 		)
 		(stroke
@@ -5233,6 +5250,16 @@
 			(type default)
 		)
 		(uuid "681622cc-0ff2-4991-bf03-8d3a9005c697")
+	)
+	(wire
+		(pts
+			(xy 148.59 58.42) (xy 152.4 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b080451-a057-4746-a9f6-9fe2757550f0")
 	)
 	(wire
 		(pts
@@ -5576,26 +5603,6 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 78.74) (xy 101.6 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c1fcc995-bd80-4bf5-93cc-2525a3d77d2a")
-	)
-	(wire
-		(pts
-			(xy 81.28 78.74) (xy 101.6 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c24bdce3-69b0-416d-928a-5445ee9ea612")
-	)
-	(wire
-		(pts
 			(xy 35.56 73.66) (xy 38.1 73.66)
 		)
 		(stroke
@@ -5756,6 +5763,16 @@
 	)
 	(wire
 		(pts
+			(xy 148.59 88.9) (xy 151.13 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9365eae-0f9a-46b2-8221-48a4bccda9d7")
+	)
+	(wire
+		(pts
 			(xy 109.22 52.07) (xy 109.22 53.34)
 		)
 		(stroke
@@ -5776,13 +5793,13 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 91.44) (xy 118.11 91.44)
+			(xy 152.4 53.34) (xy 152.4 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "eb767dc0-ee64-49f2-be00-8ba59fa806a1")
+		(uuid "ec376c50-80be-40cf-926a-5b8ccf51d66a")
 	)
 	(wire
 		(pts
@@ -5856,6 +5873,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 53.34) (xy 163.83 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9eeb576-b330-4e26-8f03-ead4ce51b4d7")
+	)
+	(wire
+		(pts
 			(xy 210.82 29.21) (xy 210.82 31.75)
 		)
 		(stroke
@@ -5904,7 +5931,7 @@
 		)
 		(uuid "06b1b75d-e1c8-4251-bf90-216db09211cb")
 	)
-	(label "IO2"
+	(label "IO45"
 		(at 31.75 134.62 0)
 		(effects
 			(font
@@ -5914,7 +5941,7 @@
 		)
 		(uuid "08c0ec45-4943-40a3-9f1b-83e0eef883c6")
 	)
-	(label "IO10"
+	(label "IO13"
 		(at 119.38 128.27 0)
 		(effects
 			(font
@@ -5934,7 +5961,7 @@
 		)
 		(uuid "256a3497-579e-44fd-a57d-c03d0d9d0463")
 	)
-	(label "IO8(SDA)"
+	(label "IO8(SCL)"
 		(at 29.21 82.55 0)
 		(effects
 			(font
@@ -5943,16 +5970,6 @@
 			(justify left bottom)
 		)
 		(uuid "2affbae3-ca40-479c-82ec-1af7a0fa7eef")
-	)
-	(label "IO14"
-		(at 113.03 91.44 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "340ca562-5f48-4200-9e24-fe90944e8932")
 	)
 	(label "IO5"
 		(at 114.3 68.58 0)
@@ -5984,7 +6001,7 @@
 		)
 		(uuid "47a15885-918e-4c65-a796-82d1b2261c0e")
 	)
-	(label "IO13"
+	(label "IO10"
 		(at 31.75 127 0)
 		(effects
 			(font
@@ -5994,7 +6011,7 @@
 		)
 		(uuid "494d135a-15bb-4251-bc04-368216a25a0a")
 	)
-	(label "IO9(SCL)"
+	(label "IO18(SDA)"
 		(at 29.21 85.09 0)
 		(effects
 			(font
@@ -6014,7 +6031,17 @@
 		)
 		(uuid "5fda62cc-fa0c-49d9-b7a9-e79bf7e860b1")
 	)
-	(label "IO8(SDA)"
+	(label "IO18(SDA)"
+		(at 163.83 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "610b83ec-5af3-4d58-9dbf-78b28b1794ac")
+	)
+	(label "IO8(SCL)"
 		(at 81.28 69.85 0)
 		(effects
 			(font
@@ -6024,7 +6051,7 @@
 		)
 		(uuid "6139b8bf-7073-49f7-bdf9-da6fbeb6f27a")
 	)
-	(label "IO11"
+	(label "IO12"
 		(at 106.68 129.54 0)
 		(effects
 			(font
@@ -6034,7 +6061,7 @@
 		)
 		(uuid "6ad93f8d-c15e-42a3-b501-009db3753654")
 	)
-	(label "IO14"
+	(label "IO15"
 		(at 16.51 60.96 0)
 		(effects
 			(font
@@ -6043,16 +6070,6 @@
 			(justify left bottom)
 		)
 		(uuid "7e7b8ca9-0770-40b0-ab48-b11acdb3abd1")
-	)
-	(label "IO9(SCL)"
-		(at 81.28 78.74 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7eaccd8c-6e40-4714-8a56-ae307ab8e2d4")
 	)
 	(label "IO7"
 		(at 114.3 73.66 0)
@@ -6074,6 +6091,16 @@
 		)
 		(uuid "8e21d90d-8d12-4ec9-8550-5a6cb346d720")
 	)
+	(label "IO15"
+		(at 113.03 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8e35d42d-7d6c-4460-a297-e8ca3988b2d0")
+	)
 	(label "IO6"
 		(at 114.3 71.12 0)
 		(effects
@@ -6094,7 +6121,7 @@
 		)
 		(uuid "95614729-d785-47e4-84d1-35ee280317ff")
 	)
-	(label "IO12"
+	(label "IO11"
 		(at 106.68 127 0)
 		(effects
 			(font
@@ -6113,6 +6140,16 @@
 			(justify left bottom)
 		)
 		(uuid "a2dc2378-efe5-4295-a7f1-e7bbc0e184a0")
+	)
+	(label "IO45"
+		(at 151.13 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b6527fc9-98d8-440b-bc0f-9a8edd6908fe")
 	)
 	(label "IO11"
 		(at 113.03 83.82 0)
@@ -6673,6 +6710,85 @@
 			(project "Falcon-MFC-ESP32"
 				(path "/b2010e0d-0487-4386-963b-10606ee8dc51"
 					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 158.75 58.42 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0d126f7b-5338-473b-b4b3-574c9b296d33")
+		(property "Reference" "R5"
+			(at 158.75 54.61 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4,7kΩ"
+			(at 158.75 56.388 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 158.75 60.198 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 158.75 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 158.75 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "84476856-ad2d-4b86-9fdc-ab5db04bd6a6")
+		)
+		(pin "2"
+			(uuid "bb6295ca-8680-4add-afdf-906c56693d5a")
+		)
+		(instances
+			(project "Falcon-MFC-ESP32"
+				(path "/b2010e0d-0487-4386-963b-10606ee8dc51"
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -8146,6 +8262,17 @@
 			)
 		)
 		(property "Description" "RF Module, ESP32-S3 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 3.3V, onboard antenna, SMD"
+			(at 133.35 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ".\\"
 			(at 133.35 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -10189,6 +10316,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 162.56 58.42 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "aae4149d-8e83-4a94-8824-3b018427bd4b")
+		(property "Reference" "#PWR033"
+			(at 158.75 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 165.354 58.42 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 162.56 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 162.56 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c2b5ec2d-35ed-47ad-b3e9-e6a3de87ce69")
+		)
+		(instances
+			(project "Falcon-MFC-ESP32"
+				(path "/b2010e0d-0487-4386-963b-10606ee8dc51"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "ICM-42688-P:ICM-42688-P")
 		(at 71.12 134.62 0)
 		(unit 1)
@@ -11243,85 +11448,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 97.79 83.82 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d641649b-3255-4e4b-b8f3-0a61d9a1ebf3")
-		(property "Reference" "R5"
-			(at 97.79 80.01 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "4,7kΩ"
-			(at 97.79 81.788 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 97.79 85.598 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 97.79 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 97.79 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1ea7fab6-ba2c-4403-85f8-2fc9af523511")
-		)
-		(pin "2"
-			(uuid "aeba6f14-50e2-41cb-83db-d94a11663e56")
-		)
-		(instances
-			(project "Falcon-MFC-ESP32"
-				(path "/b2010e0d-0487-4386-963b-10606ee8dc51"
-					(reference "R5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 102.87 54.61 180)
 		(unit 1)
@@ -12216,84 +12342,6 @@
 			(project "Falcon-MFC-ESP32"
 				(path "/b2010e0d-0487-4386-963b-10606ee8dc51"
 					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 93.98 83.82 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "fa675b1f-7226-4342-952e-274b8ceca7e9")
-		(property "Reference" "#PWR010"
-			(at 97.79 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 91.186 83.82 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 93.98 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 93.98 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 93.98 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "14200510-08e6-494e-9bca-2226031da00c")
-		)
-		(instances
-			(project "Falcon-MFC-ESP32"
-				(path "/b2010e0d-0487-4386-963b-10606ee8dc51"
-					(reference "#PWR010")
 					(unit 1)
 				)
 			)
