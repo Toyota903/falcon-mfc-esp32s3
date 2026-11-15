@@ -528,9 +528,9 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "../../Dla falcon/",
       "specctra_dsn": "",
-      "step": "",
+      "step": "Falcon-MFC-ESP32.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
